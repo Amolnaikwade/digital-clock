@@ -1,0 +1,217 @@
+
+*
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(12, 33, 55);
+}
+
+#time
+{
+display:flex;
+gap: 40px;
+color: aqua;
+}
+
+#time .circle
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px,5px);
+}
+#time .circle svg circle:nth-child(2)
+{
+    stroke : var(--clr);
+    stroke-dasharray: 440;
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#time div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+#time .ap
+{
+    position:relative;
+    font: 1em;
+    transform: translateX(-20px);
+}
+
+.dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+}
+.banner{
+    align-content: flex-start;
+}
+.banner-text{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:100%;
+    color:aliceblue;
+
+}
+.banner-text h2{
+    text-align: start;
+    font-size: 25px;
+    margin:0;
+    color: darkturquoise;
+    text-transform: uppercase;
+
+}
+.box{
+    font-size: 15px;
+    font-weight: bold;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    
+}
+.b1{
+    animation: ani1 35s infinite;
+
+}
+.b2{
+    animation: ani2 35s infinite;
+    
+}
+.b3{
+    animation: ani3 35s infinite;
+    
+}
+.b4{
+    animation: ani4 35s infinite;
+    
+}
+.b5{
+    animation: ani5 35s infinite;
+    
+}
+@keyframes ani1{
+    0%
+   {
+    opacity: 0;
+   } 
+   10%
+   {
+    opacity: 1;
+   } 
+   20%
+   {
+    opacity: 0;
+   } 
+}
+@keyframes ani2{
+    20%
+   {
+    opacity: 0;
+   } 
+   30%
+   {
+    opacity: 1;
+   } 
+   40%
+   {
+    opacity: 0;
+   } 
+}
+@keyframes ani3{
+    40%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    60%
+    {
+        opacity: 0;
+    }
+}
+@keyframes ani4{
+    60%
+    {
+        opacity: 0;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+}
+@keyframes ani5{
+    80%
+    {
+        opacity: 0;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
